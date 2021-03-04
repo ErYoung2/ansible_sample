@@ -1,2 +1,1 @@
-# ansible_sample
-test 
+Just an ansible sample for AWX.
