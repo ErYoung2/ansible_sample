@@ -13,8 +13,8 @@
     - name: disable selinux
       selinux: 
         state: disabled
-    -name: change selinux file to disabled
+    - name: change selinux file to disabled
       shell: sed -i 's/Permissive/Disabled/g' {{ selinux_file }}
     - name: change swap status
       command: swapoff -a
-    
+
