@@ -1,7 +1,0 @@
-  - hosts: test
-    user: young
-    tasks:
-     - name: ssh-copy
-       authorized_key: user=young key="{{ lookup('file', '/home/young/.ssh/id_rsa.pub') }}"
-       tags:
-         - sshkey
