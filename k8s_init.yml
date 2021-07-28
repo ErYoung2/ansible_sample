@@ -1,0 +1,20 @@
+---
+- hosts: nodes
+  gather_facts: False
+  remote_user: root
+  vars: 
+    - swap_file: /etc/fstab
+    - selinux_file: /etc/selinux/config
+
+  tasks:
+    - name: disable firewalld
+      firewalld: 
+        state: disabled
+    - name: disable selinux
+      selinux: 
+        state: disabled
+    - name: change selinux file to disabled
+      shell: sed -i 's/Permissive/Disabled/g' {{ selinux_file }}
+    - name: change swap status
+      command: swapoff -a
+
