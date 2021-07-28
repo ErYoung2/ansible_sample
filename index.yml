@@ -1,2 +1,2 @@
 ---
-import_tasks: tasks/k8s_init.yml
+- import_tasks: tasks/k8s_init.yml
