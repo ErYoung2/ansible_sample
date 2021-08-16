@@ -10,6 +10,7 @@
     - name: disable firewalld
       firewalld: 
         state: disabled
+	offline: yes
     - name: disable selinux
       selinux: 
         state: disabled
