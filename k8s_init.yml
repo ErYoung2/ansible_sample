@@ -9,8 +9,8 @@
   tasks:
     - name: disable firewalld
       firewalld: 
-        state: disabled
-	offline: yes
+        state: disable
+      offline: yes
     - name: disable selinux
       selinux: 
         state: disabled
