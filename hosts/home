@@ -1,2 +1,2 @@
 [home]
-192.168.0.150 ansible_user=young ansible_password=123
+192.168.1.150 ansible_user=young ansible_password=123
